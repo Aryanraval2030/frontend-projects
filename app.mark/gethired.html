@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(236, 242, 245);
+        }
+
+        header {
+            height: 140px;
+            justify-content: space-between;
+            background-color: white;
+            border-bottom: none;
+        }
+
+        .logo {
+            color: black;
+            font-size: 25px;
+            font-family: "Segoe Script";
+            margin-right: 100px;
+            font-weight: bold;
+        }
+
+        .main {
+            height: 90px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px 0 10px;
+            background-color: white;
+        }
+
+        /* .mark {
+           background-color: black;
+           color: rgb(248, 231, 199);
+         
+        }  */
+
+        .inr-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: sticky;
+            top: 90px;
+        }
+
+        .inr-nav a {
+            /* padding: 15px 20px; */
+            text-decoration: none;
+            color: black;
+        }
+
+        .btn-sign {
+            padding: 6px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            font-weight: bold;
+        }
+
+        .btn-log-in {
+            padding: 6px 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            box-shadow: 3px 3px 15px -2px rgba(0, 0, 0, 0.84);
+            transition-duration: 0.2s;
+        }
+
+        .btn-sign:hover {
+            color: rgb(97, 97, 97);
+        }
+
+        .btn-log-in:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            box-shadow: none;
+        }
+
+        .btn-sign {
+            padding: 6px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            font-weight: bold;
+        }
+
+        .btn-log-in {
+            padding: 6px 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            box-shadow: 3px 3px 15px -2px rgba(0, 0, 0, 0.84);
+        }
+
+        #search {
+            display: grid;
+            grid-area: search;
+            /* grid-template:
+                "search" 60px
+                / 400px; */
+
+            justify-content: center;
+            align-content: center;
+            justify-items: stretch;
+            align-items: stretch;
+            /* width: 35rem; */
+            height: 50px;
+            background: hsl(0, 0%, 99%);
+            /* border: 2px solid black; */
+            /* border: 2px solid blue; */
+
+        }
+
+        #search input {
+            display: block;
+            grid-area: search;
+            -webkit-appearance: none;
+            appearance: none;
+            /* width: 100%; */
+            height: 100%;
+            background: none;
+            padding: 0 10px 0 80px;
+            border: none;
+            border-radius: 100px;
+            font: 20px/1 system-ui, sans-serif;
+            outline-offset: -8px;
+        }
+
+        #search svg {
+            grid-area: search;
+            overflow: visible;
+            color: hsl(0, 89%, 25%);
+            fill: none;
+            stroke: currentColor;
+            height: 50px;
+        }
+
+        .spark {
+            fill: currentColor;
+            stroke: none;
+            r: 15;
+        }
+
+        .spark:nth-child(1) {
+            animation:
+                spark-radius 2.03s 1s both,
+                spark-one-motion 2s 1s both;
+        }
+
+        @keyframes spark-radius {
+            0% {
+                r: 0;
+                animation-timing-function: cubic-bezier(0, 0.3, 0, 1.57);
+            }
+
+            30% {
+                r: 15;
+                animation-timing-function: cubic-bezier(1, -0.39, 0.68, 1.04)
+            }
+
+            95% {
+                r: 8
+            }
+
+            99% {
+                r: 10
+            }
+
+            99.99% {
+                r: 7
+            }
+
+            100% {
+                r: 0
+            }
+        }
+
+        @keyframes spark-one-motion {
+            0% {
+                transform: translate(-20%, 50%);
+                animation-timing-function: cubic-bezier(0.63, 0.88, 0, 1.25)
+            }
+
+            20% {
+                transform: rotate(-0deg) translate(0%, -50%);
+                animation-timing-function: ease-in
+            }
+
+            80% {
+                transform: rotate(-230deg) translateX(-20%) rotate(-100deg) translateX(15%);
+                animation-timing-function: linear
+            }
+
+            100% {
+                transform: rotate(-360deg) translate(30px, 100%);
+                animation-timing-function: cubic-bezier(.64, .66, 0, .51)
+            }
+        }
+
+        .spark:nth-child(2) {
+            animation:
+                spark-radius 2.03s 1s both,
+                spark-two-motion 2.03s 1s both;
+        }
+
+        @keyframes spark-two-motion {
+            0% {
+                transform: translate(120%, 50%) rotate(-70deg) translateY(0%);
+                animation-timing-function: cubic-bezier(0.36, 0.18, 0.94, 0.55)
+            }
+
+            20% {
+                transform: translate(90%, -80%) rotate(60deg) translateY(-80%);
+                animation-timing-function: cubic-bezier(0.16, 0.77, 1, 0.4)
+            }
+
+            40% {
+                transform: translate(110%, -50%) rotate(-30deg) translateY(-120%);
+                animation-timing-function: linear
+            }
+
+            70% {
+                transform: translate(100%, -50%) rotate(120deg) translateY(-100%);
+                animation-timing-function: linear
+            }
+
+            80% {
+                transform: translate(95%, 50%) rotate(80deg) translateY(-150%);
+                animation-timing-function: cubic-bezier(.64, .66, 0, .51)
+            }
+
+            100% {
+                transform: translate(100%, 50%) rotate(120deg) translateY(0%)
+            }
+        }
+
+        .spark:nth-child(3) {
+            animation:
+                spark-radius 2.05s 1s both,
+                spark-three-motion 2.03s 1s both;
+        }
+
+        @keyframes spark-three-motion {
+            0% {
+                transform: translate(50%, 100%) rotate(-40deg) translateX(0%);
+                animation-timing-function: cubic-bezier(0.62, 0.56, 1, 0.54)
+            }
+
+            30% {
+                transform: translate(40%, 70%) rotate(20deg) translateX(20%);
+                animation-timing-function: cubic-bezier(0, 0.21, 0.88, 0.46)
+            }
+
+            40% {
+                transform: translate(65%, 20%) rotate(-50deg) translateX(15%);
+                animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
+            }
+
+            60% {
+                transform: translate(60%, -40%) rotate(-50deg) translateX(20%);
+                animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
+            }
+
+            70% {
+                transform: translate(70%, -0%) rotate(-180deg) translateX(20%);
+                animation-timing-function: cubic-bezier(0.15, 0.48, 0.76, 0.26)
+            }
+
+            100% {
+                transform: translate(70%, -0%) rotate(-360deg) translateX(0%) rotate(180deg) translateX(20%);
+            }
+        }
+
+        .burst {
+            stroke-width: 3;
+        }
+
+        .burst :nth-child(2n) {
+            color: #ff783e;
+        }
+
+        .burst :nth-child(3n) {
+            color: #ffab00
+        }
+
+        .burst :nth-child(4n) {
+            color: #55e214
+        }
+
+        .burst :nth-child(5n) {
+            color: #d10808
+        }
+
+        .circle {
+            r: 6;
+        }
+
+        .rect {
+            width: 10px;
+            height: 10px;
+        }
+
+        .triangle {
+            d: path("M0,-6 L7,6 L-7,6 Z");
+            stroke-linejoin: round;
+        }
+
+        .plus {
+            d: path("M0,-5 L0,5 M-5,0L 5,0");
+            stroke-linecap: round;
+        }
+
+        .burst:nth-child(4) {
+            transform: translate(30px, 100%) rotate(150deg);
+        }
+
+        .burst:nth-child(5) {
+            transform: translate(50%, 0%) rotate(-20deg);
+        }
+
+        .burst:nth-child(6) {
+            transform: translate(100%, 50%) rotate(75deg);
+        }
+
+        @keyframes particle-fade {
+
+            0%,
+            100% {
+                opacity: 0
+            }
+
+            5%,
+            80% {
+                opacity: 1
+            }
+        }
+
+        .burst :nth-child(1) {
+            animation: particle-fade 600ms 2.95s both, particle-one-move 600ms 2.95s both;
+        }
+
+        .burst :nth-child(2) {
+            animation: particle-fade 600ms 2.95s both, particle-two-move 600ms 2.95s both;
+        }
+
+        .burst :nth-child(3) {
+            animation: particle-fade 600ms 2.95s both, particle-three-move 600ms 2.95s both;
+        }
+
+        .burst :nth-child(4) {
+            animation: particle-fade 600ms 2.95s both, particle-four-move 600ms 2.95s both;
+        }
+
+        .burst :nth-child(5) {
+            animation: particle-fade 600ms 2.95s both, particle-five-move 600ms 2.95s both;
+        }
+
+        .burst :nth-child(6) {
+            animation: particle-fade 600ms 2.95s both, particle-six-move 600ms 2.95s both;
+        }
+
+        @keyframes particle-one-move {
+            0% {
+                transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+            }
+
+            100% {
+                transform: rotate(-20deg) translateX(8%) scale(0.5, 0.5)
+            }
+        }
+
+        @keyframes particle-two-move {
+            0% {
+                transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+            }
+
+            100% {
+                transform: rotate(0deg) translateX(8%) scale(0.5, 0.5)
+            }
+        }
+
+        @keyframes particle-three-move {
+            0% {
+                transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+            }
+
+            100% {
+                transform: rotate(20deg) translateX(8%) scale(0.5, 0.5)
+            }
+        }
+
+        @keyframes particle-four-move {
+            0% {
+                transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+            }
+
+            100% {
+                transform: rotate(-35deg) translateX(12%)
+            }
+        }
+
+        @keyframes particle-five-move {
+            0% {
+                transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+            }
+
+            100% {
+                transform: rotate(0deg) translateX(12%)
+            }
+        }
+
+        @keyframes particle-six-move {
+            0% {
+                transform: rotate(0deg) translate(-5%) scale(0.0001, 0.0001)
+            }
+
+            100% {
+                transform: rotate(35deg) translateX(12%)
+            }
+        }
+
+        .bar {
+            width: 100%;
+            height: 100%;
+            ry: 50%;
+            stroke-width: 1;
+            animation: bar-in 900ms 3s both;
+        }
+
+        @keyframes bar-in {
+            0% {
+                stroke-dasharray: 0 180 0 226 0 405 0 0
+            }
+
+            100% {
+                stroke-dasharray: 0 0 181 0 227 0 405 0
+            }
+        }
+
+        .magnifier {
+            animation: magnifier-in 600ms 3.6s both;
+            transform-box: fill-box;
+        }
+
+        @keyframes magnifier-in {
+            0% {
+                transform: translate(20px, 8px) rotate(-45deg) scale(0.01, 0.01);
+            }
+
+            50% {
+                transform: translate(-4px, 8px) rotate(-45deg);
+            }
+
+            100% {
+                transform: translate(0px, 0px) rotate(0deg);
+            }
+        }
+
+        .magnifier .glass {
+            cx: 27;
+            cy: 27;
+            r: 8;
+            stroke-width: 3;
+        }
+
+        .menues {
+            height: 25%;
+            width: 100%;
+            background-color: rgb(50, 50, 50);
+            color: white;
+            position: -webkit-sticky;
+            padding-top: 5px;
+            top: 0;
+        }
+
+        .menues a {
+            color: white;
+            font-weight: 500;
+        }
+
+        .menues a:hover {
+            color: rgb(204, 204, 204);
+        }
+
+        .section-1 {
+            height: 100px;
+            width: 100%;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .section-1 h1 {
+            font-size: 45px;
+        }
+
+        /* section-2 */
+
+        .section-2 {
+            height: 500px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .sec-2-btn {
+            padding: 10px 40px 10px 40px;
+            border: 2px solid black;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border-radius: 10px;
+            transition-duration: 0.2s;
+            font-weight: 500;
+        }
+
+        .sec-2-btn:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            box-shadow: none;
+        }
+
+        .icon-type {
+            font-size: 70px;
+            font-weight: bold;
+        }
+
+        /* section-3 */
+
+        .section-3 {
+            height: 700px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            padding: 0 5em;
+        }
+
+        .section-3 h1 {
+            height: 10%;
+        }
+
+        .sec-3-inr {
+            height: 45%;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 4em;
+
+        }
+
+        .sec-3-boxes {
+            margin-top: 40px;
+        }
+
+        .sec-3-boxes img {
+            height: 60%;
+            width: 60%;
+            margin-bottom: 10px;
+        }
+
+        .third {
+            height: 40%;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .img-third {
+            height: 100%;
+            width: 40%;
+        }
+
+        .section-4 {
+            height: 500px;
+            width: 100%;
+            padding: 50px 5em;
+        }
+
+        /* section-5 */
+
+        .section-5 {
+            height: 650px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .sec-5-first {
+            height: 25%;
+            margin-bottom: 25px;
+        }
+
+        .section-5-img {
+            margin-bottom: 50px;
+            height: 75%;
+        }
+
+        .section-5-img img {
+            padding: 0px 7em;
+        }
+
+        .sec-5-first .fa {
+            font-size: 50px;
+            color: rgb(10, 108, 255);
+        }
+
+        /* section-6 */
+
+        .section-6 {
+            height: 650px;
+            width: 100%;
+            margin-bottom: 100px;
+            text-align: center;
+            margin-top: 100px;
+            padding: 0 3em;
+        }
+
+        .sec-6-inr {
+
+            height: 25%;
+            width: 100%;
+        }
+
+        .sec-6-inr-2 {
+            height: 70%;
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            /* gap: 100px; */
+        }
+
+        .boxes {
+            height: 100px;
+            width: 200px;
+        }
+
+        .icon1:hover {
+            color: rgb(230, 79, 117);
+        }
+
+
+        .icon2:hover {
+            color: blue;
+        }
+
+        .icon3:hover {
+            color: rgb(7, 7, 97);
+        }
+
+        .icon4:hover {
+            color: rgb(2, 2, 138);
+        }
+
+        .icon5:hover {
+            color: red;
+        }
+
+
+
+
+
+
+        .point-view {
+            height: 4em;
+            width: 4em;
+            border-radius: 50%;
+            border: 2px solid rgb(249, 249, 249);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 80%;
+            right: 3%;
+            z-index: 111;
+            background-color: black;
+            box-shadow: 0px 4px 10px black;
+        }
+
+        .point-view p i {
+            font-size: 2em;
+            margin-top: 10px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="mark">
+            <marquee behavior="scroll" direction="">Promoting products/services using mobile apps & websites to reach
+                target users.</marquee>
+        </div>
+        <div class="main">
+            <div class="logo">Vactoy</div>
+
+            <div id="search">
+                <svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="bar" />
+
+                    <g class="magnifier">
+                        <circle class="glass" />
+                        <line class="handle" x1="32" y1="32" x2="44" y2="44"></line>
+                    </g>
+
+                    <g class="sparks">
+                        <circle class="spark" />
+                        <circle class="spark" />
+                        <circle class="spark" />
+                    </g>
+
+                    <g class="burst pattern-one">
+                        <circle class="particle circle" />
+                        <path class="particle triangle" />
+                        <circle class="particle circle" />
+                        <path class="particle plus" />
+                        <rect class="particle rect" />
+                        <path class="particle triangle" />
+                    </g>
+                    <g class="burst pattern-two">
+                        <path class="particle plus" />
+                        <circle class="particle circle" />
+                        <path class="particle triangle" />
+                        <rect class="particle rect" />
+                        <circle class="particle circle" />
+                        <path class="particle plus" />
+                    </g>
+                    <g class="burst pattern-three">
+                        <circle class="particle circle" />
+                        <rect class="particle rect" />
+                        <path class="particle plus" />
+                        <path class="particle triangle" />
+                        <rect class="particle rect" />
+                        <path class="particle plus" />
+                    </g>
+                </svg>
+                <input type=search name=q aria-label="Search for inspiration" placeholder="what are you looking for?" />
+            </div>
+            <div class="nav-btns">
+                <a href="./demo.html"><button class="btn-sign">Sign up</button></a>
+                <a href="./log.html"><button class="btn-log-in">Log in</button></a>
+            </div>
+        </div>
+        <div class="menues">
+            <div class="icon">
+                <nav>
+                    <div class="menu-wrapper">
+                        <div class="inr-nav">
+                            <a href="#">Explore</a>
+                            <a href="#">Categories</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Get Hired</a>
+                            <a href="#">Find Talent</a>
+                            <a href="./popularapps.html">popular apps</a>
+                            <a href="#">upgrade to</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- section-1 -->
+
+    <section class="section-1">
+        <h1>Get more leads, pay no fees.</h1>
+        <h5>Rank higher, skip the fees, and level up your profile.</h5>
+    </section>
+
+    <!-- section-2 -->
+
+    <section class="section-2">
+        <p class="icon-type">$8</p>
+        <p>✔ per month, billed yearly</p>
+        <p>✔ Ranking boost in search feeds</p>
+        <p>✔ Included in client recommendations</p>
+        <p>✔ 0% fees on project payouts</p>
+        <p>✔ Learn more about Dribbble Projects.</p>
+        <p>✔ Advanced profile features</p>
+        <p>✔ 12 months of Webflow for free</p>
+
+        <button class="sec-2-btn">Join Pro</button>
+    </section>
+
+    <section class="point-view" title="GO TO THE HOME">
+        <p><a href="./index.html"><i class="fa-solid fa-house"></i></a></p>
+    </section>
+
+    <!-- section-3 -->
+
+    <section class="section-3">
+        <h1>More leads. More clients. Zero fees.</h1>
+        <div class="sec-3-inr">
+            <div class="sec-3-boxes">
+                <img src="https://framerusercontent.com/images/X8ir6msbaBxbg5ATlVN0vfJWTt4.png?scale-down-to=512" alt=""
+                    height="100%" width="100%">
+                <div class="text">
+                    <h5> Stand out from the crowd</h5>
+                    <h6>Rank higher in feeds to generate more leads.</h6>
+                </div>
+            </div>
+            <div class="sec-3-boxes">
+                <img src="https://framerusercontent.com/images/O80rhuPSKnhKidNGg2GkhURrnr4.png?scale-down-to=512" alt=""
+                    height="100%" width="100%">
+                <div class="text">
+                    <h5>Improve conversion</h5>
+                    <h6>Access advanced features that will help convert more leads.</h6>
+                </div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="img-third">
+                <img src="https://framerusercontent.com/images/FnbuguX10JNWJOCgWlZJtXLK6w.png?scale-down-to=512" alt=""
+                    height="100%" width="100%">
+            </div>
+            <div class="text-2">
+                <h5>Transact for free</h5>
+                <h6>Pay no fees on transactions completed through Vactoy.</h6>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- section-4 -->
+
+    <section class="section-4">
+        <img src="https://framerusercontent.com/images/8YgF7NHG6vjzqS0cXaLPOoX8I.png" alt=" " height="100%"
+            width="100%">
+    </section>
+
+    <!-- section-5 -->
+
+    <section class="section-5">
+        <div class="sec-5-first">
+            <i class="fa fa-chart-line"></i>
+            <h1>Higher search rankings</h1>
+            <h6>Get your profile, services, and design work in front of clients searching for designers to hire.</h6>
+        </div>
+
+        <div class="section-5-img">
+            <img src="https://framerusercontent.com/images/lYoXDvS8CJpMMqRudEDeCDChPyU.png" alt="" height="100%"
+                width="100%">
+        </div>
+    </section>
+
+    <!-- section-6 -->
+
+    <section class="section-6">
+        <div class="sec-6-inr">
+            <h1>The most design-forward companies on the planet hire designers from Vactoy.</h1>
+            <h6>Our community partners with some of the most valuable companies on the planet.</h6>
+        </div>
+        <div class="sec-6-inr-2">
+            <div class="boxes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLyD7nJC4c1opgqGOB1pKDy3aEoBuRb-pahw&s"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcKaC1smZleYWcXUpO0RmHEgFh6thB4pqMYA&s"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://images.squarespace-cdn.com/content/v1/629906805218e90b8def8134/bc25b4c8-fc91-4e8d-b1e1-0a70247a602e/2.png"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://images.squarespace-cdn.com/content/v1/558a7866e4b03a72af49aa83/1692360895111-ZKOSVP3OVPIYHOTCI0EX/program-logo-SQSP.png"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJI0CBK8I4KDoWIG8tjN_CUgelS4_xlbkaCQ&s"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://i.pinimg.com/736x/af/bb/68/afbb68271a3d9f821703fee27a661f68.jpg" alt="" height="100%"
+                    width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSireKKFNn1fhA_magjdqzIsIvvvJqH5ccE-A&s"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://logos-world.net/wp-content/uploads/2024/10/Figma-Logo-2013.png" alt="" height="100%"
+                    width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6D5H5BkQNjdu00sJxcweX0eRQQgGTg81kuQ&s"
+                    alt="" height="100%" width="100%">
+            </div>
+            <div class="boxes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWWHu81a5uXSWw-O1KOOuO_s9EEt6BD2Q_Bg&s"
+                    alt="" height="100%" width="100%">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-dark mt-5">
+        <div class="container py-4">
+            <!-- Logo -->
+            <div class="text-center mb-3">
+                <h4 class="fw-bold" style="font-family:Segoe Script; font-size: 2em;">Vactoy</h4>
+            </div>
+
+            <!-- Links -->
+            <ul class="nav justify-content-center mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">Categories</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">Explore</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">Get Hired</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">popular apps</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-3 text-dark">upgrade to</a></li>
+            </ul>
+
+            <!-- Social Media -->
+            <div class="text-center mb-3">
+                <a href="#" class="text-dark mx-2">
+                    <i class="fab fa-instagram icon1 fa-lg"></i>
+                </a>
+                <a href="#" class="text-dark mx-2">
+                    <i class="fab fa-twitter icon2 fa-lg"></i>
+                </a>
+                <a href="#" class="text-dark mx-2"><i class="fab icon3 fa-facebook fa-lg"></i></a>
+                <a href="#" class="text-dark mx-2">
+                    <i class="fab icon4 fa-linkedin fa-lg"></i>
+                </a>
+                <a href="#" class="text-dark mx-2">
+                    <i class="fab fa-youtube icon5 fa-lg"></i>
+                </a>
+            </div>
+            <div class="text-center text-muted">
+                © 2025 Your Company. All rights reserved.
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

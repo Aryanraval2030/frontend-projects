@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            /* margin-top: 100px; */
+            padding: 0 5em;
+        }
+
+        .first {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+            align-items: center;
+            top: 0px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .first h1 {
+            font-size: 25px;
+        }
+
+        .inr {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            /* padding: 0 5em; */
+        }
+
+        .icon {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .icon button {
+            padding: 7px 20px;
+            border-radius: 20px;
+            background-color: black;
+            border: 2px solid black;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            transition-duration: 0.2s;
+        }
+
+        .icon button:hover {
+            border: 2px solid black;
+            color: black;
+            background-color: white;
+        }
+
+        .inr img {
+            height: 500px;
+            width: 100%;
+        }
+
+        .pera {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* section-1 */
+
+        .section-1 {
+            height: 5100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sec-1-img {
+            height: 100%;
+            width: 90%;
+        }
+
+
+
+
+
+        .point-view {
+            height: 4em;
+            width: 4em;
+            border-radius: 50%;
+            border: 2px solid rgb(249, 249, 249);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 80%;
+            right: 3%;
+            z-index: 111;
+            background-color: black;
+            box-shadow: 0px 4px 10px black;
+        }
+
+        .point-view p i {
+            font-size: 2em;
+            margin-top: 10px;
+            color: red;
+        }
+
+          #iconess {
+              display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px solid black;
+            }
+      
+
+        /* ======================================================================*/
+        /* ======================||-------RESPONSIVE-----||===================== */
+        /* ======================||-------RESPONSIVE-----||===================== */
+        /* ======================================================================*/
+        /* ===================leptop============================================*/
+        @media (max-width:1279px) and (min-width:767px) {
+            .main {
+                padding: 0 1em;
+            }
+
+            .sec-1-img {
+                width: 100%;
+            }
+        }
+
+        /* ===================teblate============================================*/
+
+        @media (max-width:768px) and (min-width:620px) {
+            .main {
+                padding: 0 1em;
+            }
+
+            .sec-1-img {
+                width: 100%;
+            }
+
+            .first h1 {
+                font-size: 20px;
+            }
+
+            .icon button {
+                padding: 5px 15px;
+                font-weight: 300;
+                color: rgb(255, 255, 255);
+            }
+        }
+
+        @media (max-width:620px) and (min-width:481px) {
+            .main {
+                padding: 0 5px;
+            }
+
+            .sec-1-img {
+                width: 100%;
+            }
+
+            .first h1 {
+                font-size: 19px;
+            }
+
+            .first {
+                width: 100%;
+            }
+
+            .icon button {
+                padding: 6px 13px;
+                font-weight: 400;
+                color: rgb(255, 255, 255);
+            }
+
+            #iconess {
+                display: none;
+            }
+        }
+
+
+        /* ===================mobaile============================================*/
+
+        @media (max-width:480px)and (min-width:250px) {
+              .main {
+                padding: 0 5px;
+            }
+
+            .sec-1-img {
+                width: 100%;
+            }
+
+            .first h1 {
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
+
+            .first {
+                width: 100%;
+            }
+
+            .icon button {
+                padding: 4px 10px;
+                font-weight: 100;
+                color: rgb(255, 255, 255);
+            }
+
+            #iconess {
+                display: none;
+            }
+        }
+
+        @media (max-width:250px)and (min-width:0px) {}
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="first">
+            <h1>Green Bank - App Landing Page Website</h1>
+            <div class="icon">
+                <i class="fa-regular fa-heart" id="iconess"></i>
+                <i class="fa-regular fa-bookmark" id="iconess"></i>
+                <button>get in touch</button>
+            </div>
+        </div>
+        <div class="inr">
+            <img src="./two.img.png" alt="">
+        </div>
+        <p style="margin-top: 20px;">Live Preview - <a href="">https://greenbank.framer.media/</a></p>
+
+        <p>Introducing Green Bank, the innovative Framer template crafted to enhance your app launch. With its modern
+            design and captivating animations, kickstart your digital venture with flair.</p>
+
+        <ul>
+            <h3>Features:</h3>
+            <li>Modern Themed Design</li>
+            <li>Customizable Animated Components</li>
+            <li>Various Scroll Animations</li>
+            <li>Fully Responsive</li>
+            <li>Easy-to-use</li>
+        </ul>
+
+        <div class="pera">
+            <h1>Full Preview</h1>
+        </div>
+
+        <section class="point-view" title="GO TO THE HOME">
+            <p><a href="./index.html"><i class="fa-solid fa-house"></i></a></p>
+        </section>
+
+        <!-- section-1 ================================================================================= -->
+
+        <div class="section-1">
+            <img class="sec-1-img"
+                src="https://cdn.dribbble.com/userupload/13973139/file/original-3c8491774e4a06a36df8d5d9f172c95a.png?resize=1504x9579&vertical=center"
+                alt="">
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

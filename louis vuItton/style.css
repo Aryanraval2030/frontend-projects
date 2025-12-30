@@ -1,0 +1,967 @@
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Louis Vuitton Web, Louis Vuitton Web Fallback, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+
+
+    header {
+        position: fixed;
+        top: 0px;
+        z-index: 999;
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+    }
+
+    nav {
+        width: 99%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 2px;
+    }
+
+    #hdr_anc {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Left side */
+    .menu-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-left i {
+        font-size: 1.3rem;
+    }
+
+    /* Center Brand */
+    .hdr_name {
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 2px;
+    }
+
+    /* Right side */
+    .menu-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu-right i {
+        font-size: 1.3rem;
+    }
+
+    .contact-text {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    /* ====== MOBILE MENU (LEFT SIDE) ====== */
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 2001;
+        color: black;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 80px 30px;
+        gap: 25px;
+        transition: left 0.4s ease-in-out;
+        z-index: 2000;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 500;
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.4s ease;
+    }
+
+    #menu-toggle:checked~.mobile-nav {
+        left: 0;
+    }
+
+    #menu-toggle:checked~.mobile-nav a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .mobile-nav a:nth-child(2) {
+        transition-delay: 0.1s;
+    }
+
+    .mobile-nav a:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .mobile-nav a:nth-child(4) {
+        transition-delay: 0.3s;
+    }
+
+    .mobile-nav a:nth-child(5) {
+        transition-delay: 0.4s;
+    }
+
+    .mobile-nav a:nth-child(6) {
+        transition-delay: 0.5s;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* ===== UNDERLINE HOVER EFFECT FOR MENU LINKS ===== */
+    nav a,
+    .mobile-nav a {
+        position: relative;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    nav a::after,
+    .mobile-nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0%;
+        height: 2px;
+        background-color: black;
+        transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    .mobile-nav a:hover::after {
+        width: 100%;
+    }
+
+    nav a:hover,
+    .mobile-nav a:hover {
+        color: #333;
+    }
+
+    .menu-btn {
+        width: 12vw;
+        display: flex;
+        align-items: center;
+    }
+
+    /* .menu-btn i {
+        display: inline-block;
+    }*/
+
+    #menu__123 {
+        font-size: 1.1rem;
+    }
+
+    /* section-1 */
+
+    #section-1 {
+        position: relative;
+        background-image: url(./cYtr9mOZauDYKdwGqYxQoJUK.jpg);
+        background-size: cover;
+        height: 95vh;
+        width: 100%;
+    }
+
+    .inr_1 {
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    #sec_id {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-self: center;
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+
+    #iconic_1 {
+        display: flex;
+        justify-self: center;
+        font-size: 2.5em;
+        font-weight: 900;
+    }
+
+    .shop {
+        border-bottom: 3px solid black;
+    }
+
+    /* section-2 */
+
+    .section-2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .first_line {
+        font-size: 2em;
+        margin: 10px;
+        font-weight: 500;
+    }
+
+    .products_2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .box-pro-2 {
+        padding: 0 1vh;
+    }
+
+    .box-pro-2 img {
+        height: 70%;
+    }
+
+    .box-pro-2 a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+
+    /* section-3 */
+
+    .section-3 {
+        height: 100vh;
+        max-width: 100%;
+        margin-top: 40px;
+        background-image: url(./PUSH2_LV_SKI_V2_DI3.webp);
+        background-size: cover;
+        position: sticky;
+        top: 1px;
+        z-index: 1;
+    }
+
+    /* section-4 */
+
+    .section-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 0 1vh;
+        position: relative;
+        top: 1px;
+        z-index: 2;
+        padding-top: 40px;
+        background-color: white;
+    }
+
+    .s-4-boxes {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.125), rgb(255, 255, 255));
+    }
+
+    .s-4-b-img-8 {
+        height: 80%;
+        background-image: url(./louis-vuitton-monogram-reversible-windbreaker--HUB25WCM36D9_PM2_Front\ view.webp);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-boxes>div:first-child {
+        aspect-ratio: 1/1;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.3s ease;
+    }
+
+    .s-4-b-img-8:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-reversible-windbreaker--HUB25WCM36D9_PM1_Cropped%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-7 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-silk-shorts--HUP14WCM4778_PM2_Front%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-b-img-7:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-silk-shorts--HUP14WCM4778_PM1_Cropped%20worn%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-6 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-silk-shirt--HUS04WCM4778_PM2_Front%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-b-img-6:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-silk-shirt--HUS04WCM4778_PM1_Cropped%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-5 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-tilted-sneaker--BVU012SC02_PM1_Side%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-b-img-5:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-tilted-sneaker--BVU012SC92_PM1_Cropped%20worn%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-4 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-drift-monogram-surplus-35mm-belt--M4543U_PM1_Detail%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .fa-bars {
+        margin-right: 5px;
+    }
+
+    .s-4-b-img-4:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-drift-monogram-surplus-35mm-belt--M4543U_PM1_Cropped%20worn%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-3 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-waxed-denim-jacket--HUA12WB71215_PM2_Front%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-b-img-3:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-waxed-denim-jacket--HUA12WB71215_PM1_Cropped%20worn%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-2 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-crewneck--HUN18WAUR148_PM2_Front%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-b-img-2:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-short-sleeved-crewneck--HUN18WAUR148_PM1_Cropped%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-1 {
+        height: 80%;
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-waxed-denim-pants--HUD12WB71215_PM2_Front%20view.png?wid=730&hei=730);
+        background-size: cover;
+        background-position: center;
+        transition-duration: 0.2s;
+    }
+
+    .s-4-b-img-1:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-waxed-denim-pants--HUD12WB71215_PM1_Cropped%20view.png?wid=730&hei=730);
+    }
+
+    .s-4-b-img-inf {
+        padding: 8px;
+        font-size: 1vw;
+        line-height: 1.4vw;
+    }
+
+    /* section-5 */
+
+    .section-5 {
+        height: 95vh;
+        width: 100%;
+        padding-top: 40px;
+        background-image: url(https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/brand-content-coremedia/men/2025/category/leather-goods/MEN_BC_LG_PRECO_SS26_04_DI3.jpg?wid=1440);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: sticky;
+        top: 1px;
+        z-index: 1;
+
+    }
+
+    /* section-6 */
+    .section-6 {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-position: center;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .section-6>p:first-child {
+        font-size: 0.7em;
+    }
+
+    .section-6>p:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .sec-6-boxes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 1vh;
+        gap: 10px;
+    }
+
+    .sec-6-inr-box {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.125), rgb(255, 255, 255));
+    }
+
+    .s-6-text {
+        height: 15%;
+        font-size: 2.3vh;
+        text-align: left;
+        padding: 0px 8px;
+    }
+
+    #s-6-i-1 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pocket-organizer--M26979_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-6-i-1:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pocket-organizer--M26979_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    #s-6-i-2 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pocket-organizer--M27020_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-6-i-2:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pocket-organizer--M27020_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    #s-6-i-3 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pocket-organizer--M26840_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-6-i-3:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pocket-organizer--M26840_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    #s-6-i-4 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-passport-cover--M27099_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-6-i-4:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-passport-cover--M27099_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    .sec-6-inr-box>div:first-child {
+        aspect-ratio: 1/1;
+    }
+
+    .section-7 {
+        height: 100vh;
+        position: sticky;
+        top: 1px;
+        z-index: 1;
+        background-image: url(https://www.louisvuitton.com/images/is/image/lv/W_BC_LG_COUSSIN%20BUCKET_Oct25_DI3.jpg?wid=2400);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .section-8 {
+        padding-top: 40px;
+        background-position: center;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .section-8>p:first-child {
+        font-size: 0.7em;
+    }
+
+    .section-8>p:nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .s-8-main-inr {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 1vh;
+        gap: 10px;
+    }
+
+    .s-8-inr {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.125), rgb(255, 255, 255));
+    }
+
+    #s-8-m-1 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-low-key-duffle-tote--M26257_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-8-m-1:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-low-key-duffle-tote--M26257_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    #s-8-m-2 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-vendome-pm--M27040_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-8-m-2:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-vendome-pm--M27040_PM1_Other%20view.png?wid=730&hei=730);
+    }
+
+    #s-8-m-3 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-coussin-bucket--M26216_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-8-m-3:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-coussin-bucket--M26216_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    #s-8-m-4 {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-vendome-mm--M26501_PM2_Front%20view.png?wid=490&hei=490);
+        background-size: cover;
+        transition-duration: 0.2s;
+    }
+
+    #s-8-m-4:hover {
+        background-image: url(https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-vendome-mm--M26501_PM1_Interior%20view.png?wid=730&hei=730);
+    }
+
+    .s-8-text {
+        height: 15%;
+        font-size: 2.3vh;
+        text-align: left;
+        padding: 0px 8px;
+
+    }
+
+    .s-8-boxes-img {
+        aspect-ratio: 1/1;
+    }
+
+    /* section-9 */
+    .section-9 {
+        position: relative;
+        width: 100%;
+        z-index: 3;
+        padding-top: 40px;
+        background-color: white;
+        text-align: center;
+    }
+
+    .section-9 p:first-child {
+        font-size: 2rem;
+    }
+
+    .section-9 p:nth-child(2) {
+        font-size: 1.5vmax;
+        padding: 0 4vmax;
+    }
+
+    .s-9-boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 0 1vh;
+    }
+
+    .s-9-inr {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        height: 320px;
+        width: 30vmax;
+        padding-bottom: 30vh;
+    }
+
+    #s-9-text {
+        height: 10%;
+        padding-top: 20px;
+    }
+
+    #s-9-text>p {
+        font-size: 20px;
+    }
+
+    #s-9-i-1 {
+        background-image: url(https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2025/central/services/LV_Personalization_WW_HP_Services_Push_1104_DII.jpg?wid=490);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #s-9-i-2 {
+        background-image: url(https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/services/LV_Gifting_WW_HP_Services_Push_20240425_DII.jpg?wid=490);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .fa-heart {
+        float: right;
+        padding: 5px;
+        color: black;
+    }
+
+    #s-9-i-3 {
+        background-image: url(https://ap.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/New-Homepage/2024/central/services/LV_ContactUs_WW_HP_Services_Push_20240425_DII.jpg?wid=490);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #s-9-text>button {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    #s-9-text>button>a {
+        text-decoration: none;
+        list-style: none;
+        color: black;
+    }
+
+    .s-9-inr>div:first-child {
+        aspect-ratio: 1/1;
+    }
+
+    footer {
+        position: relative;
+        background-color: white;
+        padding-top: 100px;
+        z-index: 4;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    #f-outer-1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 1vh;
+        border-top: 1px solid rgb(174, 173, 173);
+        border-bottom: 1px solid rgb(220, 220, 220);
+    }
+
+    .f-1-o-inr {
+        text-align: center;
+    }
+
+    .f-1-o-inr>a {
+        display: block;
+        line-height: 30px;
+        font-size: 0.9rem;
+        list-style: none;
+        text-decoration: none;
+        color: rgb(55, 55, 55);
+        font-weight: 500;
+    }
+
+    .f-1-o-inr a>span {
+        text-decoration: underline;
+        color: black;
+    }
+
+    #f-outer--most {
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        padding: 0 3.9vh;
+        margin-top: 40px;
+    }
+
+    .f--m-inr1 {
+        width: 80vw;
+    }
+
+    .f--m-inr2 {
+        display: flex;
+        width: 20%;
+        justify-content: end;
+    }
+
+    .f--m-inr2 a {
+        text-decoration: none;
+        list-style: none;
+        color: rgb(79, 79, 79);
+    }
+
+    #f-outer {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    .f-outer-inr {
+        width: 50%;
+        text-align: center;
+    }
+
+    .f-outer-inr a {
+        display: block;
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+        line-height: 2rem;
+        font-weight: 500;
+    }
+
+    #f-outer-last {
+        text-align: center;
+    }
+
+    #f-outer-last>p {
+        font-size: 2vmax;
+    }
+
+    /* responsive */
+
+    @media (max-width: 1280px) {}
+
+    @media (max-width:929px) {
+        .f--m-inr1 {
+            width: 35vmax;
+        }
+    }
+
+    @media (max-width:768px) {
+        #menu__123 {
+            display: none;
+        }
+
+        .menu-btn {
+            width: auto;
+        }
+
+        #f-legal {
+            display: none;
+        }
+
+
+        .f--m-inr1 {
+            width: auto;
+        }
+
+        .f--m-inr2 {
+            width: 50vw;
+            margin: 0 5px;
+        }
+
+        .s-9-inr {
+            height: 60vh;
+            width: 70vw;
+            padding-bottom: 1vh;
+        }
+
+        footer {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .f-1-o-inr:first-child {
+            font-size: 1rem;
+        }
+
+        .f-1-o-inr>a {
+            line-height: 6vmin;
+            font-size: 0.9rem;
+        }
+
+        .hdr_name {
+            font-size: 1.5rem;
+        }
+
+        .contact-text {
+            display: none;
+        }
+
+        .menu_1 p {
+            display: none;
+        }
+
+        .section-4 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .products_2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .search-1 {
+            display: none;
+        }
+
+        .sec-6-boxes {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .s-8-main-inr {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .section-6>p:nth-child(2) {
+            font-size: 7vmin;
+        }
+
+        .section-8>p:nth-child(2) {
+            font-size: 7vmin;
+        }
+
+        .s-9-boxes {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+
+        }
+
+        .fa-heart {
+            float: right;
+            padding: 5px;
+            color: black;
+        }
+
+    }
+
+    @media (max-width:480px) and (min-width:0px) {
+        .f-outer-inr>p {
+            font-size: 0.9rem;
+        }
+
+        .f-outer-inr>a {
+            line-height: 5.2vmin;
+            font-size: 0.7rem;
+        }
+
+        .f-1-o-inr:first-child {
+            font-size: 1rem;
+        }
+
+        .f-1-o-inr>a {
+            line-height: 5.2vmin;
+            font-size: 0.7rem;
+        }
+
+        #f-outer-1 {
+            grid-template-columns: auto auto;
+        }
+
+        .s-9-boxes {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .fa-heart {
+            display: none;
+        }
+
+        .s-4-b-img-inf {
+            font-size: 0.7em;
+            line-height: normal;
+        }
+
+        .s-6-text {
+            font-size: 0.7em;
+            line-height: normal;
+        }
+
+        .s-8-text {
+            font-size: 0.7em;
+            line-height: normal;
+        }
+
+        #iconic_1 {
+            font-size: 1.6em;
+        }
+
+        .hdr_name {
+            font-size: 1.2rem;
+        }
+
+        .contect-1 {
+            display: none;
+        }
+
+        .menu_1 p {
+            display: none;
+        }
+
+        .section-4 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .sec-6-boxes {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .s-8-main-inr {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .products_2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        #heart {
+            display: block;
+        }
+    }

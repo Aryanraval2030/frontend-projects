@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding: 0 5px 0 5px;
+    }
+
+    .container {
+      margin-top: 10px;
+      height: 480px;
+      width: 100%;
+      display: flex;
+    }
+
+    .inr-1 {
+      width: 50%;
+      padding: 50px 0 0 0;
+      text-align: center;
+    }
+
+    .inr-2 {
+      width: 50%;
+      border-bottom-left-radius: 10%;
+      border-top-left-radius: 10%;
+    }
+
+    .sign {
+      padding-top: 50px;
+    }
+
+    .chent {
+      display: block;
+      justify-content: center;
+      padding-left: 23%;
+    }
+
+    .email {
+      margin-top: 50px;
+      padding: 7px 100px 7px 5px;
+      height: 25px;
+      margin: 10px;
+      display: block;
+    }
+
+    .btn {
+      padding: 10px 50px;
+      border: 2px solid black;
+      border-radius: 5px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(28, 97, 146);
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      color: blue;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="inr-1">
+      <h1>Welcome to Vactoy</h1>
+      <h3>Create your account and discover world-class design talent.</h3>
+      <h1 class="sign">sign up</h1>
+      <div class="chent">
+        <input class="email" type="username" placeholder="enter your name">
+        <input class="email" type="email" placeholder="enter your email">
+        <input class="email" type="password" placeholder="enter your password">
+
+      </div>
+      <button class="btn">
+        sign up
+      </button>
+      <a href="./log.html" style="display: block; margin-top: 20px;">already have a account</a>
+    </div>
+    <div class="inr-2">
+      <img src="./mass.img.png" alt="" height="100%" width="100%">
+    </div>
+  </div>
+</body>
+
+</html>

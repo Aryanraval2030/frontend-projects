@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ARYLUX-VILLA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+   
+   <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn-1 {
+            position: relative;
+            display: inline-block;
+            padding: 12px 40px;
+            border: 2px solid transparent;
+            color: #8d0000;
+            background: transparent;
+            font-weight: 500;
+            border-radius: 0;
+            overflow: hidden;
+            transition: color 0.4s ease;
+            border: 2px solid black;
+
+        }
+
+        .btn-1::before,
+        .btn-1::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #c0762d;
+            transition: all 0.4s ease;
+        }
+
+        .btn-1::before {
+            top: 0;
+            right: 0;
+        }
+
+        .btn-1::after {
+            bottom: 0;
+            left: 0;
+        }
+
+        .btn-1:hover::before {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+
+        .btn-1:hover::after {
+            width: 100%;
+            left: auto;
+            right: 0;
+        }
+
+        .btn-1:hover {
+            color: #a57c52;
+            border-color: #a57c52;
+        }
+
+        body {
+            font-family: Arial sans-serif;
+        }
+
+        .content-us {
+            background-color: white;
+            color: black;
+        }
+    </Style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #3d110b;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fs-2 text mx-4" href="#">ARYLUX-VILLA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bg-white navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class=" btn nav-link dropdown-toggle text-white " href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            OUR VILLAS|
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="#">Arylux-Villa-1</a></li>
+                            <li><a class="dropdown-item" href="#">Arylux-Villa-2</a></li>
+                            <li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white"
+                            style="position: relative; text-decoration: none; transition: all 0.3s ease;"
+                            onmouseover="this.style.textDecoration='underline'"
+                            onmouseout="this.style.textDecoration='none'" aria-current="page" href="#">SURROUNDINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white style=" position: relative; text-decoration: none;
+                            transition: all 0.3s ease;" onmouseover="this.style.textDecoration='underline'"
+                            onmouseout="this.style.textDecoration='none'" aria-current="page" href="#">CONCIERGE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white style=" position: relative; text-decoration: none;
+                            transition: all 0.3s ease;" onmouseover="this.style.textDecoration='underline'"
+                            onmouseout="this.style.textDecoration='none'" aria-current="page" href="#">BOOKING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white style=" position: relative; text-decoration: none;
+                            transition: all 0.3s ease;" onmouseover="this.style.textDecoration='underline'"
+                            onmouseout="this.style.textDecoration='none'" aria-current="page" href="#">BLOG</a>
+                    </li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 bg-body-tertiary" type="search" placeholder="Search"
+                            aria-label="Search" />
+                        <button type="button" class="btn btn-outline-light">Search</button>
+                    </form>
+            </div>
+    </nav>
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.villa-vista-magnifika.com/wp-content/uploads/2023/06/vista_magnifika-01-kitchen-view__1_-2000x1125.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="text-body-emphasis">Arylux-Villas for rent</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.villa-vista-magnifika.com/wp-content/uploads/2023/06/vista_magnifika-01-bedroom-800x450.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="text-body-emphasis">Arylux-Villas for rent</h1>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.villa-vista-magnifika.com/wp-content/uploads/2023/06/vista_magnifika-01-lounge-800x450.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="text-body-emphasis">Arylux-Villas for rent</h1>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container-fluid d-flex justify-content- mb-5">
+        <div class="box" style="margin:auto; padding:0 50px;">
+            <h2 class="display-1 d-flex justify-content-center">Presentation of the service</h2>
+            <p>"Are you having trouble finding the perfect place to meet your high-end expectations?"</p>
+            <p>"Don’t hesitate any longer and come and enjoy the mild temperatures and typical Cote d’Azur setting
+                offered by our villas."</p>
+        </div>
+    </section>
+
+    <section>
+        <img src="https://www.villa-vista-magnifika.com/wp-content/uploads/2023/06/vista_view-2000x1125.jpg"
+            class="img-thumbnail" style="position: sticky; top: 0; z-index: 1;" alt="...">
+
+        <img src="https://www.villa-vista-magnifika.com/wp-content/uploads/2023/05/vista-magnifika-villa-1-1536x865.jpg"
+            class="img-thumbnail" style="position: relative; z-index: 2;" alt="...">
+    </section>
+
+    <section>
+        <div class="container-fluid text-center p-5">
+            <p class="display-1">Arylux-Villa 01</p>
+            <p>A perfect blend of luxury and tranquillity, this first villa boasts spacious interiors and a beautifully
+                landscaped exterior with a swimming pool and jacuzzi overlooking the sea. With its large capacity,
+                you’ll be able to enjoy a moment of relaxation together.</p>
+            <button type="button" class="btn btn-1 text-body-emphasis border-2" style="padding: 10px 50px;">MORE
+                INFORMATIONS</button>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container d-flex justify-content-center">
+            <img src="https://www.villa-vista-magnifika.com/wp-content/uploads/2023/05/vista-magnifika-concierge-800x450.jpg"
+                class="img-fluid" alt="">
+        </div>
+    </section>
+
+    <section style="height: 200px; margin-top: 100px; background-color: #3d110b;">
+        <div class="container d-flex justify-content-center text-white">
+            <h2 class="mt-4">Need more informations?</h2>
+        </div>
+        <p class="d-flex justify-content-center">
+            <a href="">
+                <button class="p-2 btn-1 content-us">CONTECT US</button>
+            </a>
+        </p>
+    </section>
+
+    <section>
+        <div class="container d-flex justify-content-center mt-5">
+            <img src="https://i.ytimg.com/vi/YhHTPak4GIw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBcc68ZShjkt3dlrTfj-O4ChOB1vQ"
+                class="img-fluid" alt="">
+        </div>
+    </section>
+
+
+    <section class="bg-dark text-white py-5 mt-4">
+  <div class="container">
+    <h2 class="text-center mb-5">What Our Clients Say</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary text-white border-0 shadow-lg">
+          <div class="card-body">
+            <p class="card-text">"The villa was beyond our expectations. Peaceful, luxurious, and exactly what we needed."</p>
+            <h5 class="card-title text-end">— Ananya R.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-secondary text-white border-0 shadow-lg">
+          <div class="card-body">
+            <p class="card-text">"Outstanding service and breathtaking views. We’re coming back next year for sure!"</p>
+            <h5 class="card-title text-end">— Rahul M.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light text-dark py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Premium Services</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <i class="fas fa-swimming-pool fa-2x mb-2"></i>
+        <h5>Private Pool</h5>
+        <p>Relax and enjoy your own private pool with sea view.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <i class="fas fa-utensils fa-2x mb-2"></i>
+        <h5>Private Chef</h5>
+        <p>Enjoy gourmet meals made by your personal chef.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <i class="fas fa-car-side fa-2x mb-2"></i>
+        <h5>Airport Pickup</h5>
+        <p>Smooth pickup & drop service for hassle-free travel.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <i class="fas fa-spa fa-2x mb-2"></i>
+        <h5>Spa & Wellness</h5>
+        <p>Relax with luxurious spa and massage facilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2 class="text-center mb-4 display-5">Villa Amenities</h2>
+  <div class="row text-center">
+    <div class="col-md-3 mb-4">
+      <i class="fas fa-swimming-pool fa-3x text-warning"></i>
+      <p class="mt-2">Private Pool</p>
+    </div>
+    <div class="col-md-3 mb-4">
+      <i class="fas fa-wifi fa-3x text-warning"></i>
+      <p class="mt-2">High-Speed Wi-Fi</p>
+    </div>
+    <div class="col-md-3 mb-4">
+      <i class="fas fa-utensils fa-3x text-warning"></i>
+      <p class="mt-2">In-House Chef</p>
+    </div>
+    <div class="col-md-3 mb-4">
+      <i class="fas fa-car fa-3x text-warning"></i>
+      <p class="mt-2">Free Parking</p>
+    </div>
+  </div>
+</section>
+
+
+    <footer style="height: 300px; margin-top: 20px; padding:0 10px; padding-top: 0px; background-color: #3d110b;"
+        class="pt-5">
+        <h1 class="text-white" style="font-size: 5vw;">Vista Magnifika</h1>
+        <div style="padding: 0 10px;" class="d-flex justify-content-between text-white">
+            <a href="" style="text-decoration: none; color: white;">Vista Magnifika 01 </a>
+            <a href="" style="text-decoration: none; color: white;">Vista Magnifika 02</a>
+        </div>
+        <div style="padding: 0 10px;" class="d-flex justify-content-between text-white">
+            <a href="" style="text-decoration: none; color: white;">Surroundings</a>
+            <a href="" style="text-decoration: none; color: white;">Concierge</a>
+        </div>
+        <div style="padding: 0 10px;" class="d-flex justify-content-between text-white">
+            <a href="" style="text-decoration: none; color: white;">Booking</a>
+            <a href="" style="text-decoration: none; color: white;">Blog</a>
+        </div>
+        <div class="border-top border-2 border-white w-100 my-4"></div>
+        <div style="padding: 0 10px;" class="d-flex justify-content-center gap-2 text-white">
+        <a href="" style="text-decoration: none; color: white;">Privacy policy</a>
+        <a href="" style="text-decoration: none; color: white;">Legal notice</a>
+        <a href="" style="text-decoration: none; color: white;">Credits</a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

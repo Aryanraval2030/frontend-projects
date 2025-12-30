@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-transform: capitalize;
+        }
+
+        header {
+            height: 15vh;
+            width: 100%;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: rgb(244, 21, 21);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        /* section-1 */
+        .sec-1 {
+            height: 70vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .sec-1-child {
+            height: 100%;
+            width: 60%;
+        }
+
+        .sec-1-inr {
+            padding-left: 40px;
+            padding-top: 10vh;
+        }
+
+        .freelance {
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .line {
+            border: 2px solid rgb(255, 200, 0);
+            width: 30%;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: rgb(255, 89, 0);
+            font-size: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: white;
+            color: orange;
+            border: 2px solid black;
+        }
+
+        .hi {
+            padding: 3px 0;
+            font-size: 20px;
+        }
+
+        .dezven {
+            padding: 4px 0;
+            font-size: 45px;
+        }
+
+        .lorem {
+            font-size: 15px;
+        }
+
+        .sec-1-2 {
+            border-top-left-radius: 47%;
+            border-bottom-left-radius: 47%;
+            border: 10px solid red;
+            border-right: none;
+            height: 95%;
+            width: 40%;
+            display: flex;
+            align-items: center;
+        }
+
+        .img-1 {
+            height: 90%;
+            width: 78%;
+            margin-left: 17px;
+            border: 8px solid black;
+            border-top-left-radius: 98%;
+            border-bottom-left-radius: 100%;
+            border-top-right-radius: 100%;
+        }
+
+        .img {
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+            border-top-right-radius: 100%;
+            padding: 20px 0 20px 0;
+        }
+
+        /* ======= */
+        .body-cls {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            display: flex;
+        }
+
+        .main {
+            margin: 20px;
+            position: relative;
+            z-index: 2;
+            background-color: white;
+            top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            height: 90vh;
+        }
+
+        .body-inr {
+            height: 100%;
+        }
+
+        .third-body {
+            border-top-left-radius: 70%;
+            border-bottom-left-radius: 70%;
+            background-color: red;
+            width: 50%;
+        }
+
+        .one-body {
+            width: 25%;
+            background-color: rgb(255, 204, 0);
+        }
+
+        .two-body {
+            width: 25%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .icon {
+            display: none;
+        }
+
+        @media (max-width:992px) and (min-width:841px) {
+            .sec-1-2 {
+                height: 60vh;
+                width: 70vh;
+            }
+
+            .sec-1-inr {
+                height: 60vh;
+                width: 70vh;
+            }
+
+            header {
+                height: 15vh;
+            }
+        }
+
+        @media (max-width:841px) and (min-width:775px) {
+            header nav {
+                display: none;
+            }
+
+            .icon {
+                display: block;
+                font-size: 5vh;
+            }
+
+            .logo {
+                font-size: 5vh;
+            }
+
+            .sec-1-2 {
+                height: 50vh;
+                width: 85vh;
+            }
+
+            .sec-1-inr {
+                height: 55vh;
+                width: 70vh;
+            }
+
+            .freelance {
+                font-size: 3vh;
+            }
+
+            .dezven {
+                font-size: 5.8vh;
+            }
+
+            .lorem {
+                font-size: 1.9vh;
+            }
+        }
+
+        @media (max-width:775px) and (min-width: 670px) {
+            header nav {
+                display: none;
+            }
+
+            .icon {
+                display: block;
+                font-size: 3vh;
+            }
+
+            .logo {
+                font-size: 4vh;
+            }
+
+            .sec-1-2 {
+                height: 50vh;
+                width: 85vh;
+            }
+
+            .sec-1-inr {
+                height: 55vh;
+                width: 70vh;
+            }
+
+            .freelance {
+                font-size: 2vh;
+            }
+
+            .dezven {
+                font-size: 4vh;
+            }
+
+            .lorem {
+                font-size: 1.4vh;
+            }
+
+            header nav {
+                display: none;
+            }
+
+        }
+
+        @media (max-width:670px) and (min-width: 400px) {
+            .sec-1 {
+
+                display: block;
+                height: none;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            .body-cls {
+                height: none;
+            }
+
+            .main {
+                height: 100vh;
+            }
+
+            .sec-1-inr {
+                height: auto;
+                width: 100%;
+            }
+
+            header {
+                height: 10vh;
+            }
+
+            .sec-1-2 {
+                height: 50%;
+                border-top-left-radius: 0%;
+                border-bottom-left-radius: 0%;
+                border: none;
+                width: 100%;
+            }
+
+            .img-1 {
+                height: 100%;
+                margin: 0 20vw;
+            }
+
+            .body-cls {
+                height: 110vh;
+            }
+
+            .icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .icon {
+                display: block;
+            }
+
+            header nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 400px) and (min-width:150px) {
+            .sec-1 {
+
+                display: block;
+                height: none;
+            }
+
+            header nav {
+                display: none;
+            }
+
+            .body-cls {
+                height: none;
+            }
+
+            .main {
+                height: 100vh;
+            }
+
+            .sec-1-inr {
+                height: 40vh;
+                width: 100%;
+            }
+
+            header {
+                height: 10vh;
+            }
+
+            .sec-1-2 {
+                height: 50%;
+                border-top-left-radius: 0%;
+                border-bottom-left-radius: 0%;
+                border: none;
+                width: 100%;
+            }
+
+            .img-1 {
+                height: 30vh;
+                margin: 0 10vw;
+
+            }
+
+            .body-cls {
+                height: 110vh;
+            }
+
+            .icon {
+                display: block;
+            }
+               .freelance {
+                font-size: 2vh;
+            }
+
+            .dezven {
+                font-size: 2vh;
+            }
+
+            .lorem {
+                font-size: 1vh;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="body-cls">
+        <div class="body-inr one-body">
+
+        </div>
+        <div class="body-inr two-body">
+
+        </div>
+        <div class="body-inr third-body">
+
+        </div>
+    </div>
+    <div class="main">
+        <header>
+            <div class="logo">Dezven</div>
+            <nav>
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Services</a>
+                <a href="">Experience</a>
+                <a href="">Portfolio</a>
+                <a href="">Testimonial</a>
+                <a href="">Content Us</a>
+            </nav>
+            <i class="fas fa-bars icon"></i>
+        </header>
+        <!-- section-1 -->
+        <section class="sec-1">
+            <div class="sec-1-child sec-1-inr">
+                <p class="hi">hi there,i'm</p>
+                <h1 class="dezven">Dezven indiana</h1>
+                <p class="line"></p>
+                <P class="freelance">freelance devloper |</P>
+                <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    A fuga officiis impedit at, neque officia voluptates numquam
+                    consectetur sint cumque. Veniam deserunt ab laboriosam ullam
+                    quisquam itaque nam. Quos, quas?</p>
+                <button class="btn">contect me</button>
+            </div>
+            <div class="sec-1-child sec-1-2">
+                <div class="img-1">
+                    <img class="img"
+                        src="https://imgv3.fotor.com/images/blog-cover-image/ID-Photo-Requirements-for-Passport-and-Identity-Card.jpg"
+                        alt="" height="100%" width="100%">
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
